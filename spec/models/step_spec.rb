@@ -29,7 +29,7 @@ RSpec.describe Step do
     end
 
     context 'with a name that is too long' do
-      let(:name) { 'Abcde fghijk' }
+      let(:name) { 'Abcde fghij klm' }
 
       it { is_expected.not_to be_valid }
     end
