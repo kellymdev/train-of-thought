@@ -5,13 +5,13 @@ RSpec.describe Step do
   let(:description) { 'Go for a walk' }
   subject(:step) { Step.new(name: name, description: description) }
 
-  context 'associations' do
+  describe 'associations' do
     it { is_expected.to have_many :sequences }
 
     it { is_expected.to have_many :thoughts }
   end
 
-  context 'validations' do
+  describe 'validations' do
     context 'with a valid name and description' do
       it { is_expected.to be_valid }
     end

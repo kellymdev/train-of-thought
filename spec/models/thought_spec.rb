@@ -4,13 +4,13 @@ RSpec.describe Thought do
   let(:name) { 'Stressed' }
   subject(:thought) { Thought.new(name: name) }
 
-  context 'associations' do
+  describe 'associations' do
     it { is_expected.to have_many :sequences }
 
     it { is_expected.to have_many :steps }
   end
 
-  context 'validations' do
+  describe 'validations' do
     context 'with a valid name' do
       it { is_expected.to be_valid }
     end
