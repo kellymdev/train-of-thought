@@ -1,11 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Step do
-  context 'validations' do
-    let(:name) { 'Walk' }
-    let(:description) { 'Go for a walk' }
-    subject(:step) { Step.new(name: name, description: description) }
+  let(:name) { 'Walk' }
+  let(:description) { 'Go for a walk' }
+  subject(:step) { Step.new(name: name, description: description) }
 
+  context 'associations' do
+    it { is_expected.to have_many :sequences }
+
+    it { is_expected.to have_many :thoughts }
+  end
+
+  context 'validations' do
     context 'with a valid name and description' do
       it { is_expected.to be_valid }
     end

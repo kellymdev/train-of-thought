@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817225140) do
+ActiveRecord::Schema.define(version: 20160817230520) do
+
+  create_table "sequences", force: :cascade do |t|
+    t.integer  "step_id"
+    t.integer  "thought_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["step_id"], name: "index_sequences_on_step_id"
+    t.index ["thought_id"], name: "index_sequences_on_thought_id"
+  end
 
   create_table "steps", force: :cascade do |t|
     t.string   "name"
