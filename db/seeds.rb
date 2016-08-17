@@ -15,20 +15,20 @@ shapes = Step.create!(name: 'Shapes', description: 'Notice the shapes around you
 temp = Step.create!(name: 'Temperature', description: 'Notice the temperatures around you')
 
 # Sequences
-stressed.sequences.create!([{ step: walk },
-  { step: feelings },
-  { step: breathe },
-  { step: count },
-  { step: sounds }])
+stressed.sequences.create!([{ step: walk, sequence_number: 1 },
+  { step: feelings, sequence_number: 2 },
+  { step: breathe, sequence_number: 3 },
+  { step: count, sequence_number: 4 },
+  { step: sounds, sequence_number: 5 }])
 
-anxious.sequences.create!([{ step: feelings },
-  { step: walk },
-  { step: breathe },
-  { step: count },
-  { step: breathing }])
+anxious.sequences.create!([{ step: feelings, sequence_number: 1 },
+  { step: walk, sequence_number: 2 },
+  { step: breathe, sequence_number: 3 },
+  { step: count, sequence_number: 4 },
+  { step: breathing, sequence_number: 5 }])
 
-mindfulness.sequences.create!([{ step: breathing },
-  { step: sounds },
-  { step: colours },
-  { step: shapes },
-  { step: temp }])
+mindfulness.sequences.create!([{ step: breathing, sequence_number: 1 },
+  { step: sounds, sequence_number: 2 },
+  { step: colours, sequence_number: 3 },
+  { step: shapes, sequence_number: 4 },
+  { step: temp, sequence_number: 5 }])
