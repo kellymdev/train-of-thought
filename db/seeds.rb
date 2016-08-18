@@ -10,9 +10,10 @@ sounds = Step.create!(name: 'Sounds', description: 'Notice the sounds around you
 colours = Step.create!(name: 'Colours', description: 'Notice the colours around you. Are they bright or pastel? Warm or cool?', mindfulness: true)
 breathing = Step.create!(name: 'Breathing', description: 'Take notice of your breathing. Breathe in slowly, breathe out slowly. Breathe in slowly, breathe out slowly.', mindfulness: true)
 breathe = Step.create!(name: 'Breathe', description: 'Take a deep breath', mindfulness: false)
-count = Step.create!(name: 'Count', description: 'Count to 10', mindfulness: false)
+count = Step.create!(name: 'Count', description: 'Count up to 10 slowly. Count backwards slowly from 10 down to 1.', mindfulness: false)
 shapes = Step.create!(name: 'Shapes', description: 'Notice the shapes around you. Are they round? square? rectangular? triangular?', mindfulness: true)
 temp = Step.create!(name: 'Temperature', description: 'Notice the temperatures around you. Are they warm, cool, cold or hot?', mindfulness: true)
+smell = Step.create!(name: 'Smell', description: 'Notice the smells around you. Are they fresh and clean, or floral?', mindfulness: true)
 
 # Sequences
 relaxation.sequences.create!([{ step: walk, sequence_number: 1 },
@@ -31,4 +32,5 @@ mindfulness.sequences.create!([{ step: breathing, sequence_number: 1 },
   { step: sounds, sequence_number: 2 },
   { step: colours, sequence_number: 3 },
   { step: shapes, sequence_number: 4 },
-  { step: temp, sequence_number: 5 }])
+  { step: temp, sequence_number: 5 },
+  { step: smell, sequence_number: 6 }])

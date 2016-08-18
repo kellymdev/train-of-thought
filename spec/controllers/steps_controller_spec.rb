@@ -7,7 +7,7 @@ RSpec.describe StepsController do
 
     before do
       thought.sequences.create!(step: step, sequence_number: 1)
-      get :show, thought_id: thought.id, id: step.id
+      get :show, params: { thought_id: thought, id: step }
     end
 
     it 'returns http status 200' do

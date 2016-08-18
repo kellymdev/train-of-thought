@@ -16,7 +16,7 @@ RSpec.describe ThoughtsController do
   end
 
   describe '#show' do
-    before { get :show, id: thought.id }
+    before { get :show, params: { id: thought.id } }
 
     it 'returns status 200' do
       expect(response.status).to eq 200

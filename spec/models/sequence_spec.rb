@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Sequence do
   let(:step) { Step.create!(name: 'Walk', description: 'Go for a walk', mindfulness: false) }
   let(:thought) { Thought.create!(name: 'Stressed') }
-  let(:sequence_number) { 1 }
+  let(:sequence_number) { Sequence::MAXIMUM_SEQUENCE_NUMBER }
   subject(:sequence) { Sequence.new(step: step, thought: thought, sequence_number: sequence_number) }
 
   describe 'associations' do
@@ -29,8 +29,8 @@ RSpec.describe Sequence do
       it { is_expected.not_to be_valid }
     end
 
-    context 'with a sequence number of 6' do
-      let(:sequence_number) { 6 }
+    context 'with a sequence number larger than the maximum' do
+      let(:sequence_number) { Sequence::MAXIMUM_SEQUENCE_NUMBER + 1 }
 
       it { is_expected.not_to be_valid }
     end
