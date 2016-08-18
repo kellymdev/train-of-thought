@@ -17,5 +17,13 @@ RSpec.describe StepsController do
     it 'renders the show template' do
       expect(response).to render_template :show
     end
+
+    it 'assigns @thought to the thought' do
+      expect(assigns(:thought)).to eq(thought)
+    end
+
+    it 'assigns @step to the step' do
+      expect(assigns(:step)).to eq(step)
+    end
   end
 end
