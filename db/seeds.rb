@@ -4,7 +4,7 @@ calm = Thought.create!(name: 'Calm')
 mindfulness = Thought.create!(name: 'Mindfulness')
 
 # Steps
-walk = Step.create!(name: 'Walk', description: 'Go for a walk', mindfulness: false)
+walk = Step.create!(name: 'Walk', description: 'Go for a walk. Breathe in the fresh air.', mindfulness: false)
 feelings = Step.create!(name: 'Feelings', description: "Notice your feelings. Accept how you're currently feeling.", mindfulness: false)
 sounds = Step.create!(name: 'Sounds', description: 'Notice the sounds around you. Are they loud or soft? High-pitched or low-pitched?', mindfulness: true)
 colours = Step.create!(name: 'Colours', description: 'Notice the colours around you. Are they bright or pastel? Warm or cool?', mindfulness: true)

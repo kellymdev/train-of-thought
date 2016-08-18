@@ -77,5 +77,19 @@ body {
     p.timer-text {
       font-size: 0.8em;
     }
+
+    .back-button {
+      background-color: $light-blue;
+      border: 1px solid $medium-blue;
+      color: $dark-blue;
+      border-radius: 3px;
+      font-size: 0.8em;
+      padding: 5px;
+      margin-top: 20px;
+    }
+
+    a.back-button {
+      text-decoration: none;
+    }
   }
 }
