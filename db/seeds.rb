@@ -1,6 +1,6 @@
 # Thoughts
-stressed = Thought.create!(name: 'Stressed')
-anxious = Thought.create!(name: 'Anxious')
+relaxation = Thought.create!(name: 'Relaxation')
+calm = Thought.create!(name: 'Calm')
 mindfulness = Thought.create!(name: 'Mindfulness')
 
 # Steps
@@ -15,13 +15,13 @@ shapes = Step.create!(name: 'Shapes', description: 'Notice the shapes around you
 temp = Step.create!(name: 'Temperature', description: 'Notice the temperatures around you', mindfulness: true)
 
 # Sequences
-stressed.sequences.create!([{ step: walk, sequence_number: 1 },
+relaxation.sequences.create!([{ step: walk, sequence_number: 1 },
   { step: feelings, sequence_number: 2 },
   { step: breathe, sequence_number: 3 },
   { step: count, sequence_number: 4 },
   { step: sounds, sequence_number: 5 }])
 
-anxious.sequences.create!([{ step: feelings, sequence_number: 1 },
+calm.sequences.create!([{ step: feelings, sequence_number: 1 },
   { step: walk, sequence_number: 2 },
   { step: breathe, sequence_number: 3 },
   { step: count, sequence_number: 4 },
