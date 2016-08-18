@@ -33,6 +33,7 @@ body {
       display: block;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 30px;
     }
 
     p.thought-description, p.thought-indicator {
@@ -54,13 +55,16 @@ body {
 
     ul.thought-list {
       list-style-type: none;
+      padding-left: 0px;
 
       li {
         background-color: $dark-blue;
-        display: inline-block;
+        display: block;
         border-radius: 3px;
         padding: 5px;
-        margin-bottom: 7px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 150%;
 
         a {
           text-decoration: none;
