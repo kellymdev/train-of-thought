@@ -1,24 +1,15 @@
-# README
+# Train of Thought
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An app of calming and relaxing thoughts.
 
-Things you may want to cover:
+(app/assets/images/train_of_thought.jpg)
 
-* Ruby version
+Users can:
 
-* System dependencies
+* View a list of thoughts
 
-* Configuration
+* View a list of calming steps for each thought
 
-* Database creation
+* View details for a step
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* For steps that are marked as a type of mindfulness, users can have a timed mindfulness meditation (the duration is defined by a constant in the steps class)
