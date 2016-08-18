@@ -1,4 +1,6 @@
 class Step < ApplicationRecord
+  MINDFULNESS_DURATION_IN_MINUTES = 2
+
   has_many :sequences
   has_many :thoughts, through: :sequences
 

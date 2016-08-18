@@ -5,14 +5,14 @@ mindfulness = Thought.create!(name: 'Mindfulness')
 
 # Steps
 walk = Step.create!(name: 'Walk', description: 'Go for a walk', mindfulness: false)
-feelings = Step.create!(name: 'Feelings', description: 'Notice your feelings', mindfulness: false)
-sounds = Step.create!(name: 'Sounds', description: 'Notice the sounds around you', mindfulness: true)
-colours = Step.create!(name: 'Colours', description: 'Notice the colours around you', mindfulness: true)
-breathing = Step.create!(name: 'Breathing', description: 'Notice your breathing', mindfulness: true)
+feelings = Step.create!(name: 'Feelings', description: "Notice your feelings. Accept how you're currently feeling.", mindfulness: false)
+sounds = Step.create!(name: 'Sounds', description: 'Notice the sounds around you. Are they loud or soft? High-pitched or low-pitched?', mindfulness: true)
+colours = Step.create!(name: 'Colours', description: 'Notice the colours around you. Are they bright or pastel? Warm or cool?', mindfulness: true)
+breathing = Step.create!(name: 'Breathing', description: 'Take notice of your breathing. Breathe in slowly, breathe out slowly. Breathe in slowly, breathe out slowly.', mindfulness: true)
 breathe = Step.create!(name: 'Breathe', description: 'Take a deep breath', mindfulness: false)
 count = Step.create!(name: 'Count', description: 'Count to 10', mindfulness: false)
-shapes = Step.create!(name: 'Shapes', description: 'Notice the shapes around you', mindfulness: true)
-temp = Step.create!(name: 'Temperature', description: 'Notice the temperatures around you', mindfulness: true)
+shapes = Step.create!(name: 'Shapes', description: 'Notice the shapes around you. Are they round? square? rectangular? triangular?', mindfulness: true)
+temp = Step.create!(name: 'Temperature', description: 'Notice the temperatures around you. Are they warm, cool, cold or hot?', mindfulness: true)
 
 # Sequences
 relaxation.sequences.create!([{ step: walk, sequence_number: 1 },
