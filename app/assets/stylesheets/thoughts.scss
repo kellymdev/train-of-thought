@@ -14,39 +14,51 @@ body {
   font: 100% $main-font;
   padding-left: 15px;
 
-  ul.thought-list {
-    list-style-type: none;
+  .container {
+    max-width: 400px;
 
-    li {
-      background-color: $dark-blue;
-      display: inline-block;
-      border-radius: 3px;
+    h1, h2 {
+      text-align: center;
+    }
 
-      a {
-        text-decoration: none;
-        color: $light-blue;
-        font: 100% $title-font;
-        padding: 10px;
-        margin: 5px;
+    .title {
+      font: $title-font;
+    }
+
+    ul.thought-list {
+      list-style-type: none;
+
+      li {
+        background-color: $dark-blue;
+        display: inline-block;
+        border-radius: 3px;
+
+        a {
+          text-decoration: none;
+          color: $light-blue;
+          font: 100% $title-font;
+          padding: 10px;
+          margin: 5px;
+        }
       }
     }
-  }
 
-  ul.step-list {
-    list-style-type: none;
-    padding-left: 0;
+    ul.step-list {
+      list-style-type: none;
+      padding-left: 0;
 
-    li {
-      background-color: $medium-blue;
-      padding: 10px;
-      display: block;
-      border-radius: 3px;
-      width: 100px;
-      margin-bottom: 10px;
+      li {
+        background-color: $medium-blue;
+        padding: 10px;
+        display: block;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        text-align: center;
 
-      a {
-        text-decoration: none;
-        color: $dark-blue;
+        a {
+          text-decoration: none;
+          color: $dark-blue;
+        }
       }
     }
   }
