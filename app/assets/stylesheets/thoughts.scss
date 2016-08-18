@@ -53,21 +53,31 @@ body {
       margin-bottom: 30px;
     }
 
-    ul.thought-list {
+    .list {
       list-style-type: none;
       padding-left: 0px;
 
       li {
-        background-color: $dark-blue;
         display: block;
         border-radius: 3px;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    ul.thought-list {
+      @extend .list;
+
+      li {
+        background-color: $dark-blue;
         padding: 5px;
         margin-bottom: 15px;
-        text-align: center;
         font-size: 150%;
 
         a {
-          text-decoration: none;
           color: $light-blue;
           font: 100% $title-font;
           padding: 10px;
@@ -77,19 +87,14 @@ body {
     }
 
     ul.step-list {
-      list-style-type: none;
-      padding-left: 0;
+      @extend .list;
 
       li {
         background-color: $medium-blue;
         padding: 10px;
-        display: block;
-        border-radius: 3px;
         margin-bottom: 10px;
-        text-align: center;
 
         a {
-          text-decoration: none;
           color: $dark-blue;
         }
       }
