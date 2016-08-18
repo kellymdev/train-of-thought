@@ -7,6 +7,7 @@ $very-light-blue: #d9edf5;
 // Fonts
 $title-font: 'Open Sans', sans-serif;
 $main-font: 'Lato', sans-serif;
+$thought-font: 'Raleway', sans-serif;
 
 body {
   background-color: $very-light-blue;
@@ -19,6 +20,12 @@ body {
     max-width: 400px;
 
     h1, h2 {
+      font: $title-font;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $dark-blue;
+    }
+
+    h1, h2, p.thought-description, p.thought-indicator, p.step-description {
       text-align: center;
     }
 
@@ -28,8 +35,21 @@ body {
       margin-right: auto;
     }
 
-    .title {
-      font: $title-font;
+    p.thought-description, p.thought-indicator {
+      color: $medium-blue;
+      font-family: $thought-font;
+      font-size: 150%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    p.thought-indicator {
+      margin-bottom: 0px;
+    }
+
+    p.thought-description {
+      margin-top: 5px;
+      margin-bottom: 30px;
     }
 
     ul.thought-list {
@@ -85,17 +105,21 @@ body {
     .back-button {
       background-color: $light-blue;
       border: 1px solid $medium-blue;
-      color: $dark-blue;
       border-radius: 3px;
       font-size: 0.8em;
       padding: 5px;
-      margin-top: 20px;
+      margin-top: 40px;
       display: block;
       text-align: center;
     }
 
     a.back-button {
       text-decoration: none;
+      color: $medium-blue;
+    }
+
+    a.back-button:hover {
+      color: $dark-blue;
     }
   }
 }

@@ -1,4 +1,7 @@
-<h2><%= @thought.name %></h2>
+<h1><%= @thought.name %></h1>
+
+<p class="thought-indicator"><%= @thought.indicator %>: </p>
+<p class="thought-description"><%= @thought.description %></p>
 
 <ul class="step-list">
   <% @steps.each do |step| %>
