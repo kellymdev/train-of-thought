@@ -1,7 +1,7 @@
-<%= @thought.name %>
+<h2><%= @thought.name %></h2>
 
 <ol>
   <% @steps.each do |step| %>
-    <li><%= step.name %></li>
+    <li><%= link_to step.name, step %></li>
   <% end %>
 </ol>

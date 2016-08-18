@@ -1,0 +1,32 @@
+// Colours
+$dark-blue: #5f77a2;
+$medium-blue: #87bbdc;
+$light-blue: #b3d8f4;
+$very-light-blue: #d9edf5;
+
+// Fonts
+$title-font: 'Open Sans', sans-serif;
+$main-font: 'Lato', sans-serif;
+
+body {
+  background-color: $very-light-blue;
+  font: 100% $main-font;
+
+  ul.thought-list {
+    list-style-type: none;
+
+    li {
+      background-color: $dark-blue;
+      display: inline-block;
+      border-radius: 3px;
+
+      a {
+        text-decoration: none;
+        color: $light-blue;
+        font: 100% $title-font;
+        padding: 10px;
+        margin: 5px;
+      }
+    }
+  }
+}
