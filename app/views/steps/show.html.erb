@@ -5,8 +5,9 @@
 <% if @step.mindfulness? %>
   <p class="timer-text">Spend <%= Step::MINDFULNESS_DURATION_IN_MINUTES %> minutes of mindfulness on this topic.<br /> Click the Start timer button to begin.</p>
 
-  <% button_tag "Start Timer", class: "start-button" %>
+  <%= button_tag "Start Timer", class: "start-button" %>
 
-  <% button_tag "Stop Timer", class: "stop-button" %>
+  <%= button_tag "Stop Timer", class: "stop-button" %>
 <% end %>
 
+<%= link_to "Back to steps", thought_path(@thought), class: 'back-button' %>
