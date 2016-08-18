@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Step do
   let(:name) { 'Walk' }
   let(:description) { 'Go for a walk' }
-  subject(:step) { Step.new(name: name, description: description) }
+  let(:mindfulness) { false }
+  subject(:step) { Step.new(name: name, description: description, mindfulness: mindfulness) }
 
   describe 'associations' do
     it { is_expected.to have_many :sequences }
@@ -42,6 +43,12 @@ RSpec.describe Step do
 
     context 'with a description that is too short' do
       let(:description) { 'Walk' }
+
+      it { is_expected.not_to be_valid }
+    end
+
+    context 'with a blank mindfulness value' do
+      let(:mindfulness) { }
 
       it { is_expected.not_to be_valid }
     end

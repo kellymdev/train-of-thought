@@ -4,4 +4,5 @@ class Step < ApplicationRecord
 
   validates :name, presence: true, length: { in: 3..12 }
   validates :description, presence: true, length: { minimum: 5 }
+  validates :mindfulness, inclusion: { in: [true, false] }
 end

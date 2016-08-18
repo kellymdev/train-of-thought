@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Sequence do
-  let(:step) { Step.create!(name: 'Walk', description: 'Go for a walk') }
+  let(:step) { Step.create!(name: 'Walk', description: 'Go for a walk', mindfulness: false) }
   let(:thought) { Thought.create!(name: 'Stressed') }
   let(:sequence_number) { 1 }
   subject(:sequence) { Sequence.new(step: step, thought: thought, sequence_number: sequence_number) }
