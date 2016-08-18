@@ -1,5 +1,5 @@
 <ul>
   <% @thoughts.each do |thought| %>
-    <li><%= thought.name %></li>
+    <li><%= link_to thought.name, thought %></li>
   <% end %>
 </ul>
