@@ -1,6 +1,6 @@
 <h2><%= @thought.name %></h2>
 
-<ol>
+<ul class="step-list">
   <% @steps.each do |step| %>
     <li><%= link_to step.name, step %></li>
   <% end %>

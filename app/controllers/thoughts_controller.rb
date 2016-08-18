@@ -5,6 +5,6 @@ class ThoughtsController < ApplicationController
 
   def show
     @thought = Thought.find(params[:id])
-    @steps = @thought.steps
+    @steps = @thought.steps.order(:name)
   end
 end
