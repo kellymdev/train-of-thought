@@ -3,6 +3,7 @@ relaxation = Thought.create!(name: 'Relaxation', description: 'The state of bein
 calm = Thought.create!(name: 'Calm', description: 'The absence of strong emotions; calm feelings', indicator: 'noun')
 mindfulness = Thought.create!(name: 'Mindfulness', description: 'The quality or state of being conscious or aware of something', indicator: 'noun')
 happiness = Thought.create!(name: 'Happiness', description: 'The state of being happy', indicator: 'noun')
+confidence = Thought.create!(name: 'Confidence', description: 'The feeling or belief that one can have faith in or rely on something', indicator: 'noun')
 
 # Steps
 walk = Step.create!(name: 'Walk', description: 'Go for a walk. Breathe in the fresh air.', mindfulness: false)
@@ -20,6 +21,7 @@ celebrate = Step.create!(name: 'Celebrate', description: 'Celebrate the small th
 smile = Step.create!(name: 'Smile', description: 'Happiness starts with the smallest of smiles. Make it as big as you can.', mindfulness: false)
 lie_down = Step.create!(name: 'Lie Down', description: 'Lie down on your back. Starting with your feet, and moving up towards your head, slowly relax all the muscles in your body. Feel the tension melt away as your muscles relax.', mindfulness: false)
 laugh = Step.create!(name: 'Laugh', description: 'Think of something funny. Remind yourself of your favourite joke.', mindfulness: false)
+feedback = Step.create!(name: 'Feedback', description: "Ask friends or colleagues for feedback on things you've done well.", mindfulness: false)
 
 # Sequences
 relaxation.sequences.create!([{ step: walk, sequence_number: 1 },
@@ -47,3 +49,8 @@ happiness.sequences.create!([{ step: walk, sequence_number: 1 },
   { step: celebrate, sequence_number: 3 },
   { step: smile, sequence_number: 4 },
   { step: laugh, sequence_number: 5 }])
+
+confidence.sequences.create!([{ step: achieve, sequence_number: 1 },
+  { step: walk, sequence_number: 2 },
+  { step: celebrate, sequence_number: 3 },
+  { step: feedback, sequence_number: 4 }])
