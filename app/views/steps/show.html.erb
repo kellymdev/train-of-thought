@@ -1,3 +1,11 @@
 <h2><%= @step.name %></h2>
 
 <p><%= @step.description %></p>
+
+<%= form_tag do %>
+  <% submit_tag "Start Timer", class: "start-button" %>
+<% end if @step.mindfulness? %>
+
+<%= form_tag do %>
+  <% submit_tag "Stop Timer", class: "stop-button" %>
+<% end if @step.mindfulness? %>

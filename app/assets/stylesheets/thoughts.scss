@@ -32,6 +32,7 @@ body {
         background-color: $dark-blue;
         display: inline-block;
         border-radius: 3px;
+        padding: 5px;
 
         a {
           text-decoration: none;
@@ -59,6 +60,17 @@ body {
           text-decoration: none;
           color: $dark-blue;
         }
+      }
+    }
+
+    form {
+      display: inline-block;
+
+      .start-button, .stop-button {
+        background-color: $medium-blue;
+        border: 1px solid $dark-blue;
+        border-radius: 3px;
+        display: inline-block;
       }
     }
   }
