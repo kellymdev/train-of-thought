@@ -2,6 +2,7 @@
 
 An app of calming and relaxing thoughts.
 
+![Train of Thought Logo]
 (app/assets/images/train_of_thought.jpg)
 
 Users can:
