@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Thought do
-  let(:name) { 'Stressed' }
-  subject(:thought) { Thought.new(name: name) }
+  let(:name) { 'Happiness' }
+  let(:description) { 'A happy feeling' }
+  let(:indicator) { 'noun' }
+  subject(:thought) { Thought.new(name: name, description: description, indicator: indicator) }
 
   describe 'associations' do
     it { is_expected.to have_many :sequences }
@@ -11,7 +13,7 @@ RSpec.describe Thought do
   end
 
   describe 'validations' do
-    context 'with a valid name' do
+    context 'with a valid name and description' do
       it { is_expected.to be_valid }
     end
 
@@ -23,6 +25,30 @@ RSpec.describe Thought do
 
     context 'with a name that is too short' do
       let(:name) { 'Be' }
+
+      it { is_expected.not_to be_valid }
+    end
+
+    context 'with a blank description' do
+      let(:description) { '' }
+
+      it { is_expected.not_to be_valid }
+    end
+
+    context 'with a description that is too short' do
+      let(:description) { 'Happ' }
+
+      it { is_expected.not_to be_valid }
+    end
+
+    context 'with a blank indicator' do
+      let(:indicator) { '' }
+
+      it { is_expected.not_to be_valid }
+    end
+
+    context 'with a indicator that is too short' do
+      let(:indicator) { 'Be' }
 
       it { is_expected.not_to be_valid }
     end

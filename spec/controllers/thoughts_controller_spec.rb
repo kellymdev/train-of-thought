@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ThoughtsController do
-  let!(:thought) { Thought.create!(name: 'Stressed') }
+  let!(:thought) { Thought.create!(name: 'Calm', description: 'A calming feeling', indicator: 'noun') }
 
   describe '#index' do
     before { get :index }

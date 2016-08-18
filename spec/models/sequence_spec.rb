@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Sequence do
   let(:step) { Step.create!(name: 'Walk', description: 'Go for a walk', mindfulness: false) }
-  let(:thought) { Thought.create!(name: 'Stressed') }
+  let(:thought) { Thought.create!(name: 'Calm', description: 'A calming feeling', indicator: 'noun') }
   let(:sequence_number) { Sequence::MAXIMUM_SEQUENCE_NUMBER }
   subject(:sequence) { Sequence.new(step: step, thought: thought, sequence_number: sequence_number) }
 

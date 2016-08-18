@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817235937) do
+ActiveRecord::Schema.define(version: 20160818052026) do
 
   create_table "sequences", force: :cascade do |t|
     t.integer  "step_id"
@@ -31,9 +31,11 @@ ActiveRecord::Schema.define(version: 20160817235937) do
   end
 
   create_table "thoughts", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description"
+    t.string   "indicator"
   end
 
 end

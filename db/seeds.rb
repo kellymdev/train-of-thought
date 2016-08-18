@@ -1,7 +1,8 @@
 # Thoughts
-relaxation = Thought.create!(name: 'Relaxation')
-calm = Thought.create!(name: 'Calm')
-mindfulness = Thought.create!(name: 'Mindfulness')
+relaxation = Thought.create!(name: 'Relaxation', description: 'The state of being free from tension and anxiety', indicator: 'noun')
+calm = Thought.create!(name: 'Calm', description: 'The absence of strong emotions; calm feelings', indicator: 'noun')
+mindfulness = Thought.create!(name: 'Mindfulness', description: 'The quality or state of being conscious or aware of something', indicator: 'noun')
+happiness = Thought.create!(name: 'Happiness', description: 'The state of being happy', indicator: 'noun')
 
 # Steps
 walk = Step.create!(name: 'Walk', description: 'Go for a walk. Breathe in the fresh air.', mindfulness: false)
@@ -14,13 +15,19 @@ count = Step.create!(name: 'Count', description: 'Count up to 10 slowly. Count b
 shapes = Step.create!(name: 'Shapes', description: 'Notice the shapes around you. Are they round? square? rectangular? triangular?', mindfulness: true)
 temp = Step.create!(name: 'Temperature', description: 'Notice the temperatures around you. Are they warm, cool, cold or hot?', mindfulness: true)
 smell = Step.create!(name: 'Smell', description: 'Notice the smells around you. Are they fresh and clean, or floral?', mindfulness: true)
+achieve = Step.create!(name: 'Achieve', description: 'Think about the good things you have achieved today. You have made a difference.', mindfulness: false)
+celebrate = Step.create!(name: 'Celebrate', description: 'Celebrate the small things. You are worth it. Every step is worth celebrating.', mindfulness: false)
+smile = Step.create!(name: 'Smile', description: 'Happiness starts with the smallest of smiles. Make it as big as you can.', mindfulness: false)
+lie_down = Step.create!(name: 'Lie Down', description: 'Lie down on your back. Starting with your feet, and moving up towards your head, slowly relax all the muscles in your body. Feel the tension melt away as your muscles relax.', mindfulness: false)
+laugh = Step.create!(name: 'Laugh', description: 'Think of something funny. Remind yourself of your favourite joke.', mindfulness: false)
 
 # Sequences
 relaxation.sequences.create!([{ step: walk, sequence_number: 1 },
   { step: feelings, sequence_number: 2 },
   { step: breathe, sequence_number: 3 },
   { step: count, sequence_number: 4 },
-  { step: sounds, sequence_number: 5 }])
+  { step: sounds, sequence_number: 5 },
+  { step: lie_down, sequence_number: 6 }])
 
 calm.sequences.create!([{ step: feelings, sequence_number: 1 },
   { step: walk, sequence_number: 2 },
@@ -34,3 +41,9 @@ mindfulness.sequences.create!([{ step: breathing, sequence_number: 1 },
   { step: shapes, sequence_number: 4 },
   { step: temp, sequence_number: 5 },
   { step: smell, sequence_number: 6 }])
+
+happiness.sequences.create!([{ step: walk, sequence_number: 1 },
+  { step: achieve, sequence_number: 2 },
+  { step: celebrate, sequence_number: 3 },
+  { step: smile, sequence_number: 4 },
+  { step: laugh, sequence_number: 5 }])

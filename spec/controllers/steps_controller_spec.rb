@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe StepsController do
   describe '#show' do
     let(:step) { Step.create!(name: 'Walk', description: 'Go for a walk', mindfulness: false) }
-    let(:thought) { Thought.create!(name: 'Calm') }
+    let(:thought) { Thought.create!(name: 'Calm', description: 'A calming feeling', indicator: 'noun') }
 
     before do
       thought.sequences.create!(step: step, sequence_number: 1)
