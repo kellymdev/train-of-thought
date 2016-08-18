@@ -25,7 +25,7 @@ body {
       border-bottom: 1px solid $dark-blue;
     }
 
-    h1, h2, p.thought-description, p.thought-indicator, p.step-description {
+    h1, h2, p.thought-description, p.thought-indicator, p.step-description, .back-button {
       text-align: center;
     }
 
@@ -100,10 +100,15 @@ body {
       }
     }
 
+    .button {
+      border-radius: 3px;
+    }
+
     .start-button, .stop-button {
+      @extend .button;
+
       background-color: $medium-blue;
       border: 1px solid $dark-blue;
-      border-radius: 3px;
       display: inline-block;
     }
 
@@ -112,14 +117,14 @@ body {
     }
 
     .back-button {
+      @extend .button;
+
       background-color: $light-blue;
       border: 1px solid $medium-blue;
-      border-radius: 3px;
       font-size: 0.8em;
       padding: 5px;
       margin-top: 40px;
       display: block;
-      text-align: center;
     }
 
     a.back-button {
