@@ -3,9 +3,9 @@
 <p class="step-description"><%= @step.description %></p>
 
 <% if @step.mindfulness? %>
-  <p class="timer-text">Spend <%= Step::MINDFULNESS_DURATION_IN_MINUTES %> minutes of mindfulness on this topic.<br /> Click the Start timer button to begin.</p>
+  <p class="timer-text">Spend <%= pluralize Step::MINDFULNESS_DURATION_IN_MINUTES, "minute" %> of mindfulness on this topic.<br /> Click the Start timer button to begin.</p>
 
-  <%= button_tag "Start Timer", class: "start-button" %>
+  <%= button_tag "Start Timer", class: "start-button", data: Step::MINDFULNESS_DURATION_IN_MINUTES %>
 
   <%= button_tag "Stop Timer", class: "stop-button" %>
 <% end %>
